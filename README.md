@@ -1,1 +1,1 @@
-# videos_api
+# samurai-backend
