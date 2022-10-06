@@ -11,7 +11,7 @@ const getVideoViewModel_1 = require("./utils/getVideoViewModel");
 exports.app = (0, express_1.default)();
 const jsonParser = express_1.default.json();
 exports.app.use(jsonParser);
-const port = 3001;
+const port = +(process.env.PORT || 3001);
 exports.app.delete("/__test__/data", (req, res) => {
     db_1.default.videos = [];
     res.sendStatus(status_codes_constants_1.HTTP_STATUS.NO_CONTENT_204);
