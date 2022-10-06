@@ -17,7 +17,7 @@ import { getVideoViewModel } from "./utils/getVideoViewModel";
 export const app = express();
 const jsonParser = express.json();
 app.use(jsonParser);
-const port = 3001;
+const port = +(process.env.PORT || 3001);
 
 app.delete("/__test__/data", (req, res) => {
   db.videos = [];
